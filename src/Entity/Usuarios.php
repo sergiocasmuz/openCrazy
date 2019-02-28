@@ -20,7 +20,7 @@ class Usuarios implements UserInterface
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
-    private $nombre;
+    private $username;
 
     /**
      * @ORM\Column(type="json")
@@ -38,18 +38,6 @@ class Usuarios implements UserInterface
         return $this->id;
     }
 
-    public function getNombre(): ?string
-    {
-        return $this->nombre;
-    }
-
-    public function setNombre(string $nombre): self
-    {
-        $this->nombre = $nombre;
-
-        return $this;
-    }
-
     /**
      * A visual identifier that represents this user.
      *
@@ -57,7 +45,14 @@ class Usuarios implements UserInterface
      */
     public function getUsername(): string
     {
-        return (string) $this->nombre;
+        return (string) $this->username;
+    }
+
+    public function setUsername(string $username): self
+    {
+        $this->username = $username;
+
+        return $this;
     }
 
     /**
