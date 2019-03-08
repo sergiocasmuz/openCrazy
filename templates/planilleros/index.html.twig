@@ -1,0 +1,44 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Recepcionistas{% endblock %}
+
+{% block contenido %}
+
+    <h3 class="box-title">Recepcionistas</h3>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dni</th>
+                <th>Tel</th>
+                <th>Direccion</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for planillero in planilleros %}
+            <tr>
+                <td>{{ planillero.id }}</td>
+                <td>{{ planillero.nombre }}</td>
+                <td>{{ planillero.apellido }}</td>
+                <td>{{ planillero.dni }}</td>
+                <td>{{ planillero.tel }}</td>
+                <td>{{ planillero.direccion }}</td>
+                <td>
+                    <a class="btn btn-bitbucket BTNmd BTNa" href="{{ path('planilleros_show', {'id': planillero.id}) }}">show</a>
+                    <a class="btn btn-bitbucket BTNmd BTNa" href="{{ path('planilleros_edit', {'id': planillero.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">No hay recepcionistas registrados...</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-bitbucket BTNa" href="{{ path('planilleros_new') }}">Nuevo Recepcionista</a>
+{% endblock %}

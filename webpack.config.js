@@ -15,11 +15,13 @@ Encore
      * (including one that's included on every page - e.g. "app")
      *
      * Each entry will result in one JavaScript file (e.g. app.js)
-     * and one CSS file (e.g. app.css) if you JavaScript imports CSS.
+     * and one CSS file (e.g. style.less) if you JavaScript imports CSS.
      */
     .addEntry('app', './assets/js/app.js')
-    .addStyleEntry('css/app', './assets/css/global.scss')
     //.addEntry('page2', './assets/js/page2.js')
+    //.addStyleEntry('style', './assets/css/style.less')
+    .addStyleEntry('style2', './assets/css/estilo.css')
+    .addStyleEntry('style', './assets/css/style.scss')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
@@ -43,6 +45,8 @@ Encore
 
     // enables Sass/SCSS support
     .enableSassLoader()
+    .enableLessLoader()
+
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()

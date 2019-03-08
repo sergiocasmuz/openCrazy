@@ -1,0 +1,13 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}New CuentasCorrientes{% endblock %}
+
+{% block contenido %}
+    <h1>Create new CuentasCorrientes</h1>
+    <br>
+    <br>
+    <a href="{{ path('cuentas_corrientes_index') }}"><i class="acciones fa fa-arrow-circle-left"></i></I></a>
+
+    {{ include('cuentas_corrientes/_form.html.twig') }}
+
+{% endblock %}

@@ -1,12 +1,23 @@
-const $ = require('jquery');
-// this "modifies" the jquery module: adding behavior to it
-// the bootstrap module doesn't export/return anything
-require('bootstrap');
+import $ from 'jquery';
+import "../css/estilo.css";
+import "../css/style.scss";
+/*import greet from './greet';*/
 
-// or you can include specific pieces
-// require('bootstrap/js/dist/tooltip');
-// require('bootstrap/js/dist/popover');
+
+import 'admin-lte';
 
 $(document).ready(function() {
- $('[data-toggle="popover"]').popover();
+    $('[data-toggle="popover"]').popover();
+
 });
+
+$(document).ready(function () {
+
+    $('.sidebar-toggle').pushMenu(options);
+
+});
+
+
+ /*$(document).ready(function() {
+         $('body').prepend('<h1>'+greet('jill')+'</h1>');
+     });*/

@@ -1,0 +1,43 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}CuentasCorrientes index{% endblock %}
+
+{% block contenido %}
+    <h3>CuentasCorrientes index</h3>
+
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dni</th>
+                <th>Direccion</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cuentas_corriente in cuentas_corrientes %}
+            <tr>
+                <td>{{ cuentas_corriente.id }}</td>
+                <td>{{ cuentas_corriente.nombre }}</td>
+                <td>{{ cuentas_corriente.apellido }}</td>
+                <td>{{ cuentas_corriente.dni }}</td>
+                <td>{{ cuentas_corriente.direccion }}</td>
+                <td>
+                    <a class="btn btn-bitbucket BTNa BTNmd" href="{{ path('cuentas_corrientes_show', {'id': cuentas_corriente.id}) }}">show</a>
+                    <a class="btn btn-bitbucket BTNa BTNmd" href="{{ path('cuentas_corrientes_edit', {'id': cuentas_corriente.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <a class="btn btn-bitbucket BTNa" href="{{ path('cuentas_corrientes_new') }}">Nueva Cuenta</a>
+
+{% endblock %}

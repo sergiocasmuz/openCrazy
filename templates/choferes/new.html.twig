@@ -1,0 +1,25 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Nuevo Chofer{% endblock %}
+
+{% block contenido %}
+
+    <div class="container">
+
+        <div class="row">
+
+               <h3 style="float: left;">Nuevo chofer</h3>
+            <br>
+            <br>
+            <a href="{{ path('choferes_index') }}"><i class="acciones fa fa-arrow-circle-left"></i></I></a>
+        </div>
+
+
+
+
+    {{ include('choferes/_form.html.twig') }}
+
+
+
+    </div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Choferes{% endblock %}
+
+{% block contenido %}
+
+        <h3 class="box-title">Choferes</h3>
+
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Tel</th>
+                    <th>Direccion</th>
+                    <th>actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for chofere in choferes %}
+                <tr>
+                    <td>{{ chofere.id }}</td>
+                    <td>{{ chofere.nombre }}</td>
+                    <td>{{ chofere.apellido }}</td>
+                    <td>{{ chofere.tel }}</td>
+                    <td>{{ chofere.direccion }}</td>
+                    <td>
+                         <a class="BTNmd BTNa btn btn-bitbucket" href="{{ path('choferes_show', {'id': chofere.id}) }}">Show</a>
+                         <a class="BTNmd BTNa btn btn-bitbucket" href="{{ path('choferes_edit', {'id': chofere.id}) }}">Edit</a>
+                    </td>
+                </tr>
+                 {% else %}
+                <tr>
+                    <td colspan="6">no records found</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+            <a href="{{ path('choferes_new') }}" class="btn btn-bitbucket BTNa">Nuevo chofer</a>
+
+{% endblock %}

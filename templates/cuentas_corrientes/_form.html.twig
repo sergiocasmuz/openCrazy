@@ -1,0 +1,9 @@
+{{ form_start(form) }}
+    {{ form_row(form.nombre,{'attr':{'class':'form-control'}}) }}
+    {{ form_row(form.apellido,{'attr':{'class':'form-control'}}) }}
+    {{ form_row(form.dni,{'attr':{'class':'form-control'}}) }}
+    {{ form_row(form.direccion,{'attr':{'class':'form-control'}}) }}
+    <br>
+
+    <button class="btn btn-bitbucket BTNa">{{ button_label|default('Guardar') }}</button>
+{{ form_end(form) }}

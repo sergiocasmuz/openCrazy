@@ -1,0 +1,24 @@
+body{}
+.acciones{  float: right;
+            margin-right: 15px;
+            color:#0d6aad;}
+.BTNmd{width:60px;}
+
+.BTNa{transition: color 0.5s;}
+.BTNa:hover{color:#aba;}
+
+hr{ border-color: #9acfea;
+    margin-top: 30px;
+    }
+
+@import '~admin-lte/dist/css/AdminLTE.css';
+@import '~admin-lte/dist/css/AdminLTE.min.css';
+@import '~admin-lte/dist/css/skins/_all-skins.css';
+@import '~admin-lte/bower_components/font-awesome/css/font-awesome.css';
+@import '~admin-lte/bower_components/bootstrap/dist/css/bootstrap.css';
+@import '~admin-lte/bower_components/bootstrap/dist/css/bootstrap-theme.min.css';
+
+
+
+
+

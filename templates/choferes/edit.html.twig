@@ -1,0 +1,18 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Editar Choferes{% endblock %}
+
+{% block contenido %}
+
+    <div class="row">
+        <h3 style="float: left;">Editar Choferes</h3>
+        <br>
+        <br>
+        <a href="{{ path('choferes_index') }}"><i class="acciones fa fa-arrow-circle-left"></i></I></a>
+            {{ include('choferes/_delete_form.html.twig') }}
+    </div>
+
+    {{ include('choferes/_form.html.twig', {'button_label': 'Editar'}) }}
+
+
+{% endblock %}

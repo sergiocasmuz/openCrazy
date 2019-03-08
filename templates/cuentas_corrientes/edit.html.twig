@@ -1,0 +1,32 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Edit CuentasCorrientes{% endblock %}
+
+{% block contenido %}
+    <div class="row">
+        <h3 style="float: left;">Editar Cuentas Corrientes</h3>
+        <h2 style="float: right;margin-top: 15px;">
+            <a href="{{ path('cuentas_corrientes_index') }}"><i class="fa fa-arrow-circle-left"></i></i></a>
+        </h2>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div>
+
+    {{ include('cuentas_corrientes/_form.html.twig', {'button_label': 'Editar'}) }}
+
+    <div style="float:right;">
+
+        <div style="float:right; margin-top: -35px;">
+            {{ include('cuentas_corrientes/_delete_form.html.twig') }}
+        </div>
+
+    </div>
+
+
+
+
+{% endblock %}

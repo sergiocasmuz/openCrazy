@@ -1,0 +1,63 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Planilleros{% endblock %}
+
+{% block contenido %}
+
+    <h1>Ficha de recepcionista</h1>
+
+
+    <dvi class="row">
+        <div class="col-md-6">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Nombre</h3>
+                </div>
+                <div class="box-body">{{ planillero.nombre }}</div>
+            </div>
+        </div>
+    </dvi>
+
+    <dvi class="row">
+        <div class="col-md-6">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Apellido</h3>
+                </div>
+                <div class="box-body">{{ planillero.apellido }}</div>
+            </div>
+        </div>
+    </dvi>
+
+    <dvi class="row">
+        <div class="col-md-6">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">DNI</h3>
+                </div>
+                <div class="box-body">{{ planillero.dni }}</div>
+            </div>
+        </div>
+    </dvi>
+
+    <dvi class="row">
+        <div class="col-md-6">
+            <div class="box box-solid box-primary">
+                <div class="box-header">
+                    <h3 class="box-title">Teléfono</h3>
+                </div>
+                <div class="box-body">{{ planillero.tel }}</div>
+            </div>
+        </div>
+    </dvi>
+
+<div class="row">
+    <div class="col-md-6" style="margin-left: 20px;">
+        <a class="btn btn-bitbucket BTNa BTNmd" href="{{ path('planilleros_index') }}">Volver</a>
+
+        <a class="btn btn-bitbucket BTNa BTNmd" href="{{ path('planilleros_edit', {'id': planillero.id}) }}">Editar</a>
+
+        <div style="float: right; margin:-5px 20px 0px 0px;">{{ include('planilleros/_delete_form.html.twig') }}</div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    {% include 'lateral.html.twig' %}
+    {% include 'encabezado.html.twig' %}
+
+    <div class="container">
+    {% block contenido %}{% endblock %}
+    </div>
+{% endblock %}

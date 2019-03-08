@@ -1,0 +1,20 @@
+{% extends 'disenio.html.twig' %}
+
+{% block title %}Editar Recepcionista{% endblock %}
+
+{% block contenido %}
+
+    <h3>Edit Planilleros</h3>
+    <br>
+    <br>
+    <a href="{{ path('planilleros_index') }}">
+        <i class="acciones fa fa-arrow-circle-left"></i>
+    </a>
+
+    {{ include('planilleros/_delete_form.html.twig') }}
+
+    {{ include('planilleros/_form.html.twig', {'button_label': 'Editar'}) }}
+
+
+
+{% endblock %}
